@@ -30,7 +30,7 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
-        value: https://portfolio-backend-iw1y.onrender.com
+        value: https://portfolio-backend-ag2n.onrender.com
     headers:
       - path: /*
         name: Cache-Control
