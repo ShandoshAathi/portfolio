@@ -1,0 +1,7 @@
+# SQLite database file (auto-generated, do not commit)
+*.db
+*.db-shm
+*.db-wal
+
+node_modules/
+.env
