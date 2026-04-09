@@ -43,7 +43,8 @@ const Contact = () => {
     setApiMsg('');
 
     try {
-      const API_BASE = import.meta.env.VITE_API_URL || '';
+      // Automatically use the live backend if environment variable is missing
+      const API_BASE = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? '' : 'https://portfolio-backend-q9ha.onrender.com');
       const res  = await fetch(`${API_BASE}/api/contact`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
