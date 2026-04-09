@@ -1,3 +1,5 @@
+import profileImg from '../assets/profile.png';
+
 const Hero = () => {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -5,18 +7,39 @@ const Hero = () => {
 
   return (
     <section className="hero" id="hero">
-      <p className="hero-label">Hello, I'm</p>
-      <h1 className="hero-title">ATHIKESAVAN S</h1>
-      <p className="hero-subtitle">
-        Artificial Intelligence &amp; Data Science Engineer&nbsp;|&nbsp;Python Programmer
-      </p>
-      <div className="hero-buttons">
-        <a href="mailto:shandosh6381aathi@gmail.com" className="btn-primary">
-          Hire Me
-        </a>
-        <button className="btn-outline" onClick={() => scrollTo('projects')}>
-          View Projects
-        </button>
+      <div className="hero-inner">
+        {/* Left: Text Content */}
+        <div className="hero-content">
+          <p className="hero-label">Hello, I'm</p>
+          <h1 className="hero-title">ATHIKESAVAN S</h1>
+          <p className="hero-subtitle">
+            Artificial Intelligence &amp; Data Science Engineer&nbsp;|&nbsp;Python Programmer
+          </p>
+          <div className="hero-buttons">
+            <a href="mailto:shandosh6381aathi@gmail.com" className="btn-primary">
+              Hire Me
+            </a>
+            <button className="btn-outline" onClick={() => scrollTo('projects')}>
+              View Projects
+            </button>
+          </div>
+        </div>
+
+        {/* Right: Profile Image */}
+        <div className="hero-image-wrapper">
+          <div className="hero-image-glow" />
+          <div className="hero-image-ring">
+            <img
+              src={profileImg}
+              alt="Athikesavan S — AI & Data Science Engineer"
+              className="hero-profile-img"
+            />
+          </div>
+          <div className="hero-image-badge">
+            <span>🤖</span>
+            <span>AI Engineer</span>
+          </div>
+        </div>
       </div>
 
       <div className="hero-scroll">
