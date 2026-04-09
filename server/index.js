@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 // ── Middleware ──────────────────────────────────────────────
 app.use(cors({
-  origin: (process.env.CORS_ORIGIN || 'http://localhost:5173,http://localhost:4173')
+  origin: (process.env.CORS_ORIGIN || 'http://localhost:5173,http://localhost:4173,https://aathi-s-portfolio.netlify.app')
     .split(',').map(s => s.trim()),
   methods: ['GET', 'POST', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type'],
